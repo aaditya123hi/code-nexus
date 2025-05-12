@@ -1,19 +1,12 @@
-# code-nexus
 #include <iostream>
 using namespace std;
 
 int main() {
     int N;
-    cout << "Enter number of days (N): ";
+    cout << "Enter number of days: ";
     cin >> N;
 
-    // Counters for each flower type
-    int sunbuds = 0;
-    int moonblossoms = 0;
-    int starroots = 0;
-    int crystalFlowers = 0;
-    int wildleaf = 0;
-    int restingDays = 0;
+    int sunbuds = 0, moonblossoms = 0, starroots = 0, crystals = 0, wildleaf = 0, resting = 0;
 
     for (int day = 1; day <= N; day++) {
         bool div2 = (day % 2 == 0);
@@ -21,37 +14,34 @@ int main() {
         bool div4 = (day % 4 == 0);
 
         if (div2 && div3 && div4) {
-            restingDays++;
-        }
+            resting++;
+        } 
         else if (div2 && div3) {
-            crystalFlowers++;
-        }
+            crystals++;
+        } 
         else if (div2) {
             sunbuds += 2;
-        }
+        } 
         else if (div3) {
             moonblossoms += 3;
-        }
+        } 
         else if (div4) {
             starroots += 4;
-        }
+        } 
         else {
             wildleaf++;
         }
     }
 
-    // Calculating total flowers
-    int totalFlowers = sunbuds + moonblossoms + starroots + crystalFlowers + wildleaf;
+    int total = sunbuds + moonblossoms + starroots + crystals + wildleaf;
 
-    // Output results
-    cout << "\n--- Gardener's Flower Report ---\n";
-    cout << "Sunbuds: " << sunbuds << endl;
-    cout << "Moonblossoms: " << moonblossoms << endl;
-    cout << "Starroots: " << starroots << endl;
-    cout << "Crystal Flowers: " << crystalFlowers << endl;
-    cout << "Wildleaf: " << wildleaf << endl;
-    cout << "Resting Days: " << restingDays << endl;
-    cout << "Total Flowers Planted: " << totalFlowers << endl;
+    cout << "Sunbuds: " << sunbuds << "\n";
+    cout << "Moonblossoms: " << moonblossoms << "\n";
+    cout << "Starroots: " << starroots << "\n";
+    cout << "Crystal Flowers: " << crystals << "\n";
+    cout << "Wildleaf: " << wildleaf << "\n";
+    cout << "Resting soil days: " << resting << "\n";
+    cout << "Total flowers planted: " << total << "\n";
 
     return 0;
 }
