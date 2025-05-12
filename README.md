@@ -36,7 +36,7 @@ int main() {
     int total = sunbuds + moonblossoms + starroots + crystals + wildleaf;
 
     cout << "Sunbuds: " << sunbuds << "\n";
-    cout << "Moonblossoms: " << moonblossoms << "\n";
+    cout << "Moonblossoms:  << moonblossoms << "\n";
     cout << "Starroots: " << starroots << "\n";
     cout << "Crystal Flowers: " << crystals << "\n";
     cout << "Wildleaf: " << wildleaf << "\n";
